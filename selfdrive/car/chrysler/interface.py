@@ -49,6 +49,7 @@ class CarInterface(CarInterfaceBase):
 
     ret.centerToFront = ret.wheelbase * 0.44
 
+    ret.minSteerSpeed = -0.1
     if min_steer_check:
       ret.minSteerSpeed = 3.8 * inverse_speed_adjust_ratio  # m/s
       if candidate in (CAR.PACIFICA_2019_HYBRID, CAR.PACIFICA_2020, CAR.JEEP_CHEROKEE_2019):
