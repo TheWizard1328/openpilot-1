@@ -32,7 +32,7 @@ class CarState(CarStateBase):
 
   def update(self, cp, cp_cam):
     speed_adjust_ratio = self.cachedParams.get_float('jvePilot.settings.speedAdjustRatio', 5000)
-    min_steer_check = self.opParams.get('steer.checkMinimum')
+    min_steer_check = (self.cachedParams.get('moneyPlane.settings.pandaModEnabled', 5000) == "0")
     inverse_speed_adjust_ratio = 2 - speed_adjust_ratio
 
     ret = car.CarState.new_message()
